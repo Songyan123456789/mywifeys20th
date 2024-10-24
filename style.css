@@ -1,0 +1,246 @@
+body {
+  background: linear-gradient(135deg, #ff69b4, #00ff1e);
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+h1 {
+  color: #00ff1e;
+  font-size: 60px;
+  margin-top: 50px;
+  text-align: center;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+h2 {
+  color: #00ff1e;
+  font-size: 42px;
+  margin-top: 50px;
+  text-align: center;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+h3 {
+  color: #ff69b4;
+  font-size: 30px;
+  margin-top: 0px;
+  text-align: center;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+h6 {
+  color: #00ff1e;
+  font-size: 12px;
+  margin-top: 0px;
+  text-align: center;
+  text-shadow: 1px 1px 2px #000000;
+}
+
+.audio-control {
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+#audio-button {
+  background-color: #ff69b4;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  padding: 15px 30px;
+  font-size: 24px;
+  cursor: pointer;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#audio-button:hover {
+  background-color: #00ff1e;
+  transform: scale(1.05);
+}
+
+.click-me {
+  display: inline-block;
+  margin-left: 15px;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000000;
+  animation: bounce 1s infinite;
+  cursor: pointer;
+}
+
+.images-section-head {
+  padding: 50px 20px 0px 20px;
+  text-align: center;
+}
+
+.images-section {
+  padding: 0px 20px;
+  text-align: center;
+}
+
+.images-section-tail {
+  padding: 0px 20px 50px 20px;
+  text-align: center;
+}
+
+.message-section {
+  max-width: 800px;
+  margin: 40px auto;
+  margin-top: 0px;
+  padding: 30px;
+  background-color: #fff0f5;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.message-section h3 {
+  text-align: center;
+  color: #ff69b4;
+  font-size: 32px;
+  margin-bottom: 40px;
+  text-shadow: none;
+}
+
+.message-section p {
+  color: #ff1493;
+  font-size: 22px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+.images {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 150px;
+  perspective: 1000px;
+  margin: 20px;
+}
+
+.flip-card:hover {
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card.flip .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #000000;
+}
+
+.flip-card-front img {
+  /* width: 100%; */
+  height: 100%;
+  /* border: 5px solid white; */
+  border-radius: 10px;
+}
+
+.flip-card-back {
+  background-color: #ff69b4ac;
+  color: #00ff1e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+}
+
+.flip-card-back p {
+  padding: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #000;
+}
+
+.flip-card-back .source {
+  position: absolute;
+  top: 3%;
+  left: 3%;
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+}
+
+.flip-card-back .edit {
+  position: absolute;
+  bottom: 3%;
+  right: 3%;
+  padding: 0px;
+  margin: 0px;
+  font-size: 14px;
+}
+
+.floating-hearts {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 0;
+  pointer-events: none;
+}
+
+.heart {
+  width: 80px;
+  height: 80px;
+  background: url("hello-kitty.png") no-repeat center;
+  background-size: contain;
+  position: absolute;
+  animation: float 15s infinite;
+  opacity: 0.7;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #00ff1e;
+  background-color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  bottom: 0;
+  width: 100%;
+}
